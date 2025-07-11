@@ -1,60 +1,72 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Demo</title>
-</head>
-<body>
-    <h1>Recommended Books</h1>
+<?php
 
-    <?php
-        $books = [
-            [
-                "name" => "Do Androids Dream of Electric Sheep",
-                "author" => "Philip K. Dick",
-                "releaseYear" => "1968",
-                "purchaseURL" => "http://example.com"
-            ],
-            [
-                "name" => "Project Hail Mary",
-                "author" => "Andy Weir",
-                "releaseYear" => "2021",
-                "purchaseURL" => "http://example.com"
-            ],
-            [
-                "name" => "The Martian",
-                "author" => "Andy Weir",
-                "releaseYear" => "2011",
-                "purchaseURL" => "http://example.com"
-            ]
-        ];
+// $books = [
+//     [
+//         "name" => "Do Androids Dream of Electric Sheep",
+//         "author" => "Philip K. Dick",
+//         "releaseYear" => "1968",
+//         "purchaseURL" => "http://example.com"
+//     ],
+//     [
+//         "name" => "Project Hail Mary",
+//         "author" => "Andy Weir",
+//         "releaseYear" => "2021",
+//         "purchaseURL" => "http://example.com"
+//     ],
+//     [
+//         "name" => "The Martian",
+//         "author" => "Andy Weir",
+//         "releaseYear" => "2011",
+//         "purchaseURL" => "http://example.com"
+//     ]
+// ];
 
-        // function filter($items, $fn) {
-        //     $filteredItems = [];
+// function filter($items, $fn) {
+//     $filteredItems = [];
 
-        //     foreach ($items as $item) {
-        //         if ($fn($item)) {
-        //             $filteredItems[] = $item;
-        //         }
-        //     }
+//     foreach ($items as $item) {
+//         if ($fn($item)) {
+//             $filteredItems[] = $item;
+//         }
+//     }
 
-        //     return $filteredItems;
-        // }
+//     return $filteredItems;
+// }
 
-        $filteredBooks = array_filter($books, function($book) {
-            return $book["releaseYear"] >= 2000;
-        });
-    ?>
+// $filteredBooks = array_filter($books, function($book) {
+//     return $book["author"] === "Andy Weir";
+// });
 
-    <ul>
-        <?php foreach ($filteredBooks as $book) : ?>
-            <li>
-                <a href="<?= $book["purchaseURL"]; ?>">
-                    <?= $book["name"]; ?> (<?= $book["releaseYear"]; ?>)
-                </a>
-            </li>
-        <?php endforeach; ?>
-    </ul>
-</body>
-</html>
+// require "index.view.php";
+
+// $name = "Laracasts";
+// $cost = 15;
+
+// $bussiness = [
+//     "name" => "Laracasts",
+//     "cost" => 15,
+//     "categories" => ["Testing", "PHP", "Javascript"]
+// ];
+
+// if ($bussiness["cost"] > 99) {
+//     echo "Not interested<br>";
+// }
+
+// foreach ($bussiness["categories"] as $category) {
+//     echo $category . "<br>";
+// }
+
+// function register($user) {
+//     // Create the user record in the db
+//     // Log them in
+//     // Send a welcome email
+//     // Redirect their new dashboard
+// }
+
+$heading = "Home";
+
+require "views/index.view.php";
+
+?>
+
+
