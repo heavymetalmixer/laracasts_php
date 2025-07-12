@@ -63,7 +63,11 @@
 //     // Redirect their new dashboard
 // }
 
+require "functions.php";
+
 $heading = "Home";
+
+
 
 require "views/index.view.php";
 
