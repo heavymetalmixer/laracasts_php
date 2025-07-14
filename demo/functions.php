@@ -1,4 +1,5 @@
 <?php
+// Dump the data inside $value and "die"
 function dd($value) {
     echo "<pre>";
     var_dump($value);
